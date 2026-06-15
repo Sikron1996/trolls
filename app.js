@@ -1,6 +1,6 @@
 import { ethers } from "https://esm.sh/ethers@6.13.4";
 import EthereumProvider from "https://esm.sh/@walletconnect/ethereum-provider@2.17.2";
-const CONTRACT_ADDRESS="0xec1E69AE9dd34049e1F54b2702e79740dd57FAA3";const PROJECT_ID="fe55ea601c3e7e0925c0b33723d6b158";const READ_RPC="https://ethereum.publicnode.com";const PRICE_ETH="0.0001";
+const CONTRACT_ADDRESS="0x827B90a3E64095D24B82bDab8042c12D78044F0D";const PROJECT_ID="fe55ea601c3e7e0925c0b33723d6b158";const READ_RPC="https://ethereum.publicnode.com";const PRICE_ETH="0.0001";
 const ABI=["function mint(uint256 amount) external payable","function PRICE() view returns (uint256)","function totalSupply() view returns (uint256)","function freeMintUsed(address user) view returns (bool)"];
 let provider,signer,contract,readProvider,readContract,account,wcProvider;const $=id=>document.getElementById(id),modal=$("walletModal");
 function text(id,v){const e=$(id);if(e)e.textContent=v}function status(m){text("status",m)}function openModal(){modal.classList.remove("hidden")}function closeModal(){modal.classList.add("hidden")}function amount(){let v=Number($("amount").value);if(!v||v<1)v=1;if(v>100)v=100;$("amount").value=v;return v}
